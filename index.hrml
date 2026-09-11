@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI PREDICTOR // LYBIA</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Всплывающее уведомление о выигрыше -->
+    <div id="payout-ticker" class="payout-ticker-box">
+        <div class="ticker-icon">⚡</div>
+        <div class="ticker-content">
+            <span class="ticker-title">تم تسجيل دخل مباشر</span>
+            <span id="ticker-text">ربح Bat_Erdene99 مبلغ ₮ 21000 في لعبة Aviator</span>
+        </div>
+    </div>
+
+    <!-- Загрузочный экран / Сканирование -->
+    <div id="scanning-screen" class="loader-overlay">
+        <div class="loader-box">
+            <div class="spinner"></div>
+            <div class="loader-status">
+                <span>جاري قراءة السيرفر</span>
+                <span id="scan-percent">0%</span>
+            </div>
+            <div id="progress-bar" class="progress-fill"></div>
+        </div>
+        <div class="loader-sub">جاري الاتصال بالسيرفر المركزي في أولان باتور...</div>
+    </div>
+
+    <!-- Плавающая кнопка Telegram -->
+    <a href="https://t.me/+mVD71yfvh45lZjcy" target="_blank" class="tg-float">
+        <i class="tg-icon">✈️</i>
+    </a>
+
+    <!-- Шапка сайта -->
+    <div class="main-wrapper">
+        <header>
+            <div class="free-access">
+                فترة الوصول المجاني: <span id="timer">05:00</span>
+            </div>
+            <h1>
+                <span>AI PREDICTOR</span>
+            </h1>
+            <p>// نظام الاختراق المغولي نشط //</p>
+            
+            <div class="header-badges">
+                <span>حماية SSL</span>
+                <span>معلومات سريعة</span>
+                <span>أكثر من 12k مستخدم</span>
+            </div>
+        </header>
+
+        <!-- Основной блок -->
+        <main>
+            <div class="server-status">
+                <div>سرعة السيرفر: 42ms</div>
+            </div>
+
+            <div class="payouts-header">
+                <h3>
+                    // الأرباح الأخيرة //
+                    <span class="live-tag">مباشر</span>
+                </h3>
+            </div>
+
+            <div class="stream-section">
+                <div class="stream-title">
+                    <h2>// اختيار قناة المعلومات //</h2>
+                    <div class="users-badge">
+                        <span>434 مستخدم يقرؤون الإشارات الآن</span>
+                    </div>
+                </div>
+
+                <div class="cards-grid">
+                    <div class="stream-card">
+                        <div class="card-thumb">
+                            <img src="https://iili.io/KOce6qG.png" alt="VIP Sports">
+                        </div>
+                        <div class="card-details">
+                            <h3>VIP للرياضة</h3>
+                            <div class="card-stat">
+                                <span>دقة الذكاء الاصطناعي</span>
+                                <span class="stat-val">99.8%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="stream-card">
+                        <div class="card-thumb">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqBdX8SuaC1Ws7ZYuCVQstQ4qRi9A_3SWujg&s" alt="Aviator">
+                            <div class="tag-hot">مبكر</div>
+                        </div>
+                        <div class="card-details">
+                            <h3>اختراق Aviator</h3>
+                            <div class="card-stat">
+                                <span>نسبة النجاح</span>
+                                <span class="stat-val">94.2%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="stream-card">
+                        <div class="card-thumb">
+                            <img src="https://rotativka.com/en/wp-content/uploads/sites/3/2021/06/Mines-Demo.jpg" alt="Mines">
+                            <div class="tag-stable">مستقر</div>
+                        </div>
+                        <div class="card-details">
+                            <h3>اختراق Mines</h3>
+                            <div class="card-stat">
+                                <span>المنطقة الآمنة</span>
+                                <span class="stat-val">97.0%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="stream-card">
+                        <div class="card-thumb">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThYP5CGxc52hWd4ToMHI8MIJhun5BEjHh5LQ&s" alt="Penalty">
+                        </div>
+                        <div class="card-details">
+                            <h3>ضربات الجزاء Penalty</h3>
+                            <div class="card-stat">
+                                <span>مؤشر الأهداف</span>
+                                <span class="stat-val">89.5%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Консоль -->
+                <div class="console-wrapper">
+                    <div class="console-head">
+                        <span>لوحة تحكم النظام // CENTRAL_CORE_ULAANBAATAR</span>
+                        <span class="status-online">متصل</span>
+                    </div>
+                    <div id="console-output" class="console-body"></div>
+                </div>
+            </div>
+
+            <!-- Отзывы -->
+            <section class="reviews-wrapper">
+                <h3>آراء المستخدمين</h3>
+                <div class="reviews-list">
+                    <div class="review-card">
+                        "أخيرًا تمكنت من التقاط إشارة 15x في لعبة Aviator! زاد مبلغي من 20,000إل9,000فورًا. شكرًا جزيلًا يا شباب!"
+                        <div class="review-user">- BatErdene_UB_92</div>
+                    </div>
+                    <div class="review-card">
+                        "كنت مترددًا في البداية، ولكن اختراق Mines يعمل حقًا. إنه يحدد المناطق الآمنة بنسبة 100% وبشكل صحيح."
+                        <div class="review-user">- Temuulen_MN</div>
+                    </div>
+                    <div class="review-card">
+                        "لقد كسبت  50,000خلال عطلة نهاية الأسبوع باستخدام إشارات Penalty. جربوه حتمًا!"
+                        <div class="review-user">- Ganzo_HacksX</div>
+                    </div>
+                </div>
+            </section>
+
+            <footer>
+                <div>إصدار النظام: v3.4.1 (النسخة المستقرة لمنغوليا)</div>
+                <div>جميع البيانات محمية بتشفير RSA-2048</div>
+                <div>لأغراض تعليمية فقط. يرجى الاستخدام بمسؤولية.</div>
+            </footer>
+        </main>
+    </div>
+
+    <!-- Модальное окно (Инструкция) -->
+    <div id="access-modal" class="modal-overlay">
+        <div class="modal-box">
+            <button id="close-modal" class="modal-close">&times;</button>
+            <div class="modal-tag">الدفع مطلوب</div>
+            <h2>الوصول ومتابعة الملف</h2>
+            <div class="modal-timer-sub">
+                الوقت المتبقي: <span class="timer-display">04:59</span>
+            </div>
+
+            <div class="modal-steps">
+                <div class="step-item">
+                    <div class="step-badge">1</div>
+                    <div>
+                        <p><strong>تسجيل حساب رسمي</strong></p>
+                        <p>فقط الحسابات المسجلة عبر الرابط أدناه سيتم ربطها بالنظام.</p>
+                    </div>
+                </div>
+                <div class="step-item">
+                    <div class="step-badge">2</div>
+                    <div>
+                        <p><strong>إعادة شحن بمبلغ 20,000 ₮ على الأقل</strong></p>
+                        <p>يلزم إجراء عملية شحن جديدة للتوافق مع خوارزمية النظام.</p>
+                    </div>
+                </div>
+                <div class="step-item">
+                    <div class="step-badge">3</div>
+                    <div>
+                        <p><strong>تفعيل برنامج التنبؤ (Predictor)</strong></p>
+                        <p>تواصل مع المسؤول وأرسل معرّف 1xbet الخاص بك للحصول على رمز التفعيل.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Кнопки ссылок -->
+            <div class="modal-actions">
+                <a href="https://reffpa.com/L?tag=d_6036366m_69903c_&site=6036366&ad=69903&r=registration" target="_blank" class="btn-main">1. التسجيل والدخول</a>
+                <a href="https://t.me/Omar_officiaI_bot" target="_blank" class="btn-sub">2. التواصل مع البوت</a>
+                <a href="https://t.me/+1YvxLkznUNAzNDYy target="_blank" class="btn-tg">الانضمام إلى القناة</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript логика -->
+    <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      // 1. ТАЙМЕР
+      let timeInSeconds = 300;
+      const timerElement = document.getElementById("timer");
+      const modalTimer = document.querySelector(".timer-display");
+
+      function updateTimer() {
+        const minutes = Math.floor(timeInSeconds / 60);
+        const seconds = timeInSeconds % 60;
+        const formatted = `${String(minutes).padStart(2, "0")}:${String(seconds).padStart(2, "0")}`;
+        if (timerElement) timerElement.textContent = formatted;
+        if (modalTimer) modalTimer.textContent = formatted;
+
+        if (timeInSeconds > 0) {
+          timeInSeconds--;
+        } else {
+          timeInSeconds = 300;
+        }
+      }
+      setInterval(updateTimer, 1000);
+      updateTimer();
+
+      // 2. ЗАГРУЗКА
+      const scanningScreen = document.getElementById("scanning-screen");
+      const percentText = document.getElementById("scan-percent");
+      let progress = 0;
+
+      const scanInterval = setInterval(() => {
+        progress += Math.floor(Math.random() * 8) + 3;
+        if (progress >= 100) {
+          progress = 100;
+          if (percentText) percentText.textContent = "100%";
+          clearInterval(scanInterval);
+
+          setTimeout(() => {
+            if (scanningScreen) {
+              scanningScreen.style.opacity = "0";
+              setTimeout(() => { scanningScreen.style.display = "none"; }, 500);
+            }
+          }, 400);
+        } else {
+          if (percentText) percentText.textContent = `${progress}%`;
+        }
+      }, 120);
+
+      // 3. ВЫИГРЫШИ (MNT)
+      const tickerBox = document.getElementById("payout-ticker");
+      const tickerText = document.getElementById("ticker-text");
+
+      const mnUsers = [
+        "Bat_Erdene99", "Ganbaatar_MNG", "Temuulen_Bet", "Batzorig_Win", 
+        "Khulan_VIP", "Narantuya_88", "Altangerel_01", "Bolormaa_Slot"
+      ];
+      const games = ["Aviator", "Mines", "Penalty Shootout", "Slots"];
+
+      function triggerRandomPayout() {
+        const user = mnUsers[Math.floor(Math.random() * mnUsers.length)];
+        const game = games[Math.floor(Math.random() * games.length)];
+        const amount = (Math.floor(Math.random() * 800) + 50) * 1000;
+
+        if (tickerText && tickerBox) {
+            tickerText.innerHTML = `ربح <b>${user}</b> مبلغ ₮ ${amount.toLocaleString()} في لعبة ${game}`;
+            tickerBox.style.display = "flex";
+            tickerBox.style.opacity = "1";
+
+            setTimeout(() => {
+              tickerBox.style.opacity = "0";
+              setTimeout(() => { tickerBox.style.display = "none"; }, 500);
+            }, 4500);
+        }
+      }
+      setInterval(triggerRandomPayout, 8000);
+
+      // 4. КОНСОЛЬ
+      const consoleOutput = document.getElementById("console-output");
+      const logs = [
+        "[تم] نظام الذكاء الاصطناعي نشط...",
+        "[تم] جاري الاتصال بسيرفر 1XBET...",
+        "[تم] تم الاتصال بالسيرفر المركزي في أولان باتور...",
+        "[تم] جاري استقبال بيانات الأرباح بـ MNT...",
+        "[نظام] جاري ضبط إعدادات النظام...",
+        "[تم] الاتصال مستقر (السرعة 42ms)"
+      ];
+
+      let logIndex = 0;
+      function addConsoleLog() {
+        if (consoleOutput) {
+            if (logIndex < logs.length) {
+              const line = document.createElement("div");
+              line.textContent = logs[logIndex];
+              consoleOutput.appendChild(line);
+              consoleOutput.scrollTop = consoleOutput.scrollHeight;
+              logIndex++;
+            } else {
+              logIndex = 0;
+              consoleOutput.innerHTML = "";
+            }
+        }
+      }
+      setInterval(addConsoleLog, 2200);
+
+      // 5. МОДАЛЬНОЕ ОКНО
+      const cards = document.querySelectorAll(".stream-card");
+      const modal = document.getElementById("access-modal");
+      const closeModal = document.getElementById("close-modal");
+
+      cards.forEach((card) => {
+        card.addEventListener("click", () => {
+          if (modal) modal.style.display = "flex";
+        });
+      });
+
+      if (closeModal) {
+        closeModal.addEventListener("click", () => {
+          if (modal) modal.style.display = "none";
+        });
+      }
+    });
+    </script>
+</body>
+</html>
